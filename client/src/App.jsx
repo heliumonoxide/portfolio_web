@@ -5,6 +5,7 @@ import Introduction from "./components/Introduction/Introduction";
 import bgImage from './assets/bg-introduction.png';
 import About from "./components/About/About"
 
+
 function App() {
   return (
     <>
@@ -13,6 +14,7 @@ function App() {
           <Header />
           <div
             className="snap-center bg-local bg-center bg-cover w-full min-h-screen bg-zinc-50 scroll-smooth pt-[80px]"
+
             style={{
               backgroundImage: `url(${bgImage})`,
             }}
