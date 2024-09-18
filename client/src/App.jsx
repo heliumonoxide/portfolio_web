@@ -4,7 +4,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import Introduction from "./components/Introduction/Introduction";
 import bgImage from './assets/bg-introduction.png';
 import About from "./components/About/About"
-
+import Projects from "./components/Projects/Projects"
 
 function App() {
   return (
@@ -25,12 +25,12 @@ function App() {
             <About />
           </div>
           <div
-            className="snap-center bg-local bg-center bg-cover w-full min-h-screen bg-zinc-50 scroll-smooth pt-[80px]"
+            className="snap-center bg-local bg-center bg-cover w-full min-h-screen bg-zinc-50 scroll-smooth"
             style={{
               backgroundImage: `url(${bgImage})`,
             }}
           >
-            <Introduction />
+            <Projects />
           </div>
         </div>
       </Router>
