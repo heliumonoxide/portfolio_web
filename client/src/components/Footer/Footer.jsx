@@ -5,9 +5,10 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between gap-8">
           {/* Company Info */}
           <div className="flex flex-col">
-            <h3 className="text-2xl font-bold mb-4">My Portfolio</h3>
+            {/* <h3 className="text-2xl font-bold mb-4">My Portfolio</h3> */}
+            <img src="assets/Header.png" className="w-32 -ml-5 pb-5"/>
             <p className="text-sm mb-4">
-              Building innovative solutions for a better future.
+              Empowering Artificial Intelligence as solutions for a better future.
             </p>
           </div>
 
@@ -43,7 +44,7 @@ const Footer = () => {
             <h4 className="text-xl font-semibold mb-4">Follow Me</h4>
             <div className="flex space-x-4">
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/bryan-indarto-giovani/"
                 aria-label="LinkedIn"
                 className="hover:text-violet-400"
               >
@@ -54,7 +55,7 @@ const Footer = () => {
                 />
               </a>
               <a
-                href="https://github.com"
+                href="https://github.com/heliumonoxide"
                 aria-label="GitHub"
                 className="hover:text-violet-400"
               >

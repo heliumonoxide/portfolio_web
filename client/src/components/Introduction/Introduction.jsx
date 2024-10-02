@@ -1,5 +1,3 @@
-import profileImage from "../../assets/ProfilePhoto.png";
-import introComponent from "../../assets/IntroComponent.svg";
 import { useState, useEffect } from "react";
 
 const Introduction = () => {
@@ -8,7 +6,8 @@ const Introduction = () => {
     "Artificial Intelligence",
     "Robotic Process Automation",
     "PCB Design",
-    "sasa",
+    "Control System Design",
+    "IoT System engineering",
   ];
   const [index, setIndex] = useState(0);
 
@@ -23,7 +22,7 @@ const Introduction = () => {
     <>
       <section id="intro">
         <div className="absolute -top-[350px] -left-[300px]">
-          <img src={introComponent} alt="" className="-z-10" />
+          <img src="assets/IntroComponent.svg" alt="" className="-z-10" />
         </div>
         <div className="flex flex-row place-content-center gap-5 sm:mx-5 md:mx-8 xl:mx-20 px-10 my-10 flex-wrap-reverse">
           <div className="flex flex-col p-2 mt-0 md:mt-2 text-center xl:text-left z-20 w-[650px]">
@@ -62,12 +61,12 @@ const Introduction = () => {
               </p>
             </div>
             <div className="mt-8 mb-2 flex flew-row place-content-center p-2 gap-5">
-              <a href="">
+              <a href="#contact">
                 <div className="transition ease-in-out duration-300 bg-violet-600 hover:bg-transparent hover:border-violet-600 hover:text-black backdrop-blur-md border border-white/20 rounded-lg p-8 text-violet-100 font-thin sm:text-lg md:text-xl px-5 py-3">
                   Hire me!
                 </div>
               </a>
-              <a href="">
+              <a href="#projects">
                 <div className="transition ease-in-out duration-300 bg-violet-600 hover:bg-transparent hover:border-violet-600 hover:text-black backdrop-blur-md border border-white/20 rounded-lg p-8 text-violet-100 font-thin sm:text-lg md:text-xl px-5 py-3">
                   My Portfolio
                 </div>
@@ -77,7 +76,7 @@ const Introduction = () => {
           <div className="flex flex-col w-[600px]">
             <div className="flex flew-row place-content-center">
               <img
-                src={profileImage}
+                src="assets/ProfilePhoto.png"
                 alt=""
                 className="sm:h-[150px] md:h-[500px] md:h-[508px] z-10"
               />

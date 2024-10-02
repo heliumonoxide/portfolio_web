@@ -74,19 +74,19 @@ const ContactMe = () => {
               <ul className="space-y-4">
                 <li>
                   <span className="font-semibold">Email: </span>
-                  <a href="mailto:youremail@example.com" className="text-violet-400 hover:underline">
-                    youremail@example.com
+                  <a href="mailto:bryan.indarto.giovani@gmail.com" className="text-violet-400 hover:underline">
+                    bryan.indarto.giovani@gmail.com
                   </a>
                 </li>
                 <li>
                   <span className="font-semibold">Phone: </span>
-                  <a href="tel:+123456789" className="text-violet-400 hover:underline">
-                    +123 456 789
+                  <a href="tel:+6287781767666" className="text-violet-400 hover:underline">
+                    +62 877 8176 7666
                   </a>
                 </li>
                 <li>
                   <span className="font-semibold">Location: </span>
-                  Your City, Country
+                  Tangerang Selatan, Indonesia
                 </li>
               </ul>
   
@@ -94,10 +94,10 @@ const ContactMe = () => {
               <div className="mt-8">
                 <h4 className="text-lg font-semibold mb-4">Follow Me</h4>
                 <div className="flex space-x-4">
-                  <a href="https://linkedin.com" aria-label="LinkedIn" className="hover:text-violet-400">
+                  <a href="https://www.linkedin.com/in/bryan-indarto-giovani/" aria-label="LinkedIn" className="hover:text-violet-400">
                     <img src="assets/linkedin.svg" alt="LinkedIn" className="w-6 h-6"/>
                   </a>
-                  <a href="https://github.com" aria-label="GitHub" className="hover:text-violet-400">
+                  <a href="https://github.com/heliumonoxide" aria-label="GitHub" className="hover:text-violet-400">
                     <img src="assets/github.svg" alt="GitHub" className="w-6 h-6"/>
                   </a>
                 </div>

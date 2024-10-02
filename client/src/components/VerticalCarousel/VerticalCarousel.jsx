@@ -8,9 +8,12 @@ const VerticalCarousel = ({ cards }) => {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((prevIndex) =>
-        prevIndex === cards.length - 1 ? 0 : prevIndex + 1
+        prevIndex === cards.length - 1 ? 0 : prevIndex 
+      + 1
       );
-    }, 9000); // Change slide every 3 seconds
+    }
+    , 9000
+  ); // Change slide every 3 seconds
     return () => clearInterval(interval);
   }, [cards.length]);
 
@@ -59,7 +62,7 @@ const VerticalCarousel = ({ cards }) => {
                 key={index}
                 className="w-full h-[400px] py-5 flex md:flex-row flex-col items-center justify-center rounded-lg"
               >
-                <div className="w-[100px] md:w-[800px] md:h-full content-center">
+                <div className="md:w-[800px] h-[100px] overflow-hidden md:h-full justify-center content-center md:pr-10">
                   <img
                     className="object-cover object-left rounded-lg md:h-[320px]"
                     src={card.picture}
@@ -67,23 +70,27 @@ const VerticalCarousel = ({ cards }) => {
                   />
                 </div>
                 <div className="text-center items-center flex flex-col gap-2 justify-between h-full w-full text-zinc-800 py-5">
-                  <h2 className="text-xl md:text-4xl font-semibold text-violet-950">
+                  <h2 className="text-lg md:text-4xl font-semibold text-violet-950">
                     {card.title}
                   </h2>
-                  <p className="text-sm md:text-base line-clamp-6 md:line-clamp-6">{card.content}</p>
+                  <p className="text-sm md:text-base line-clamp-3 md:line-clamp-6">
+                    {card.content}
+                  </p>
                   <div className="flex flex-col md:flex-row justify-between w-full">
                     <div className="flex flex-row justify-center md:justify-start gap-1 md:gap-5">
                       {card.logos.map((logo, logoIndex) => (
                         <img
                           key={logoIndex}
                           src={logo}
-                          className="w-[40px]"
+                          className="h-[20px] md:h-[40px]"
                           alt=""
                         />
                       ))}
                     </div>
                     <div className="bg-gradient-to-r from-[#FF63EA] to-[#0029CF] text-sm md:text-lg inline-block px-4 py-2 text-transparent bg-clip-text">
-                      <a href={card.link}>Go to project {">"}</a>
+                      {card.link != "" && (
+                        <a href={card.link}>Go to project {">"}</a>
+                      )}
                     </div>
                   </div>
                 </div>
