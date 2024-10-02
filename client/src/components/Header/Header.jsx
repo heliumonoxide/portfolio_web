@@ -28,7 +28,7 @@ const Header = () => {
     },
     {
       name: "Resume",
-      link: "/",
+      link: "https://drive.google.com/file/d/1L8VPK_BW_u8u1eQjPmAZa5aKvEj3dOgV/view?usp=sharing",
     },
     {
       name: "Experience",
@@ -82,7 +82,7 @@ const Header = () => {
             style={{ opacity: opacity, scale: offset }}
           >
             <div className="flex flex-row xl:block xl:hidden justify-between px-10 my-2">
-              <img src={LogoNavbar} alt="Logo Navbar" className="h-[40px]" />
+              <a href="#home"><img src={LogoNavbar} alt="Logo Navbar" className="h-[40px]" /></a>
               <button onClick={toggleMenu}>
                 <svg
                   className="w-5 h-5"
