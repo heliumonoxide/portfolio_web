@@ -1,36 +1,36 @@
 const experiences = [
   {
-    date: "2022 - Present",
-    title: "Software Engineer",
+    date: "Dec 2023 - Present",
+    title: "IT Application Developer Intern @ Siemens",
     description:
-      "Developing scalable applications using React, Node.js, and cloud technologies.",
-    icon: "assets/sie-logo-petrol-rgb.png",
+      "Developing scalable applications using React, angular, dotnet, microsoft platform, SQL databases, and cloud technologies.",
+    icon: "assets/companies/siemens.svg",
   },
   {
-    date: "2020 - 2022",
-    title: "Junior Developer",
-    description: "Worked on front-end development using Angular and .NET.",
-    icon: "assets/sie-logo-petrol-rgb.png",
+    date: "May 2023 - Aug 2023",
+    title: "Robotic Process Automation Intern @ Telkomsel",
+    description: "Developing a robot for low-level activity automation using UiPath structural process and Developing flow using Microsoft Power Platform to make automation for Human Capital Manager to automate a flow for requesting new training.",
+    icon: "assets/companies/telkomsel.svg",
   },
   {
-    date: "2018 - 2020",
-    title: "Intern",
+    date: "Jan 2023 - May 2023",
+    title: "Mechatronics Programmer @ PT. Pharos Indonesia",
     description:
-      "Internship in web development and cloud infrastructure management.",
-    icon: "assets/sie-logo-petrol-rgb.png",
+      "Developed a new automation system in PT Pharos called Pure Water Generator (PWG) to support industrial automation. Tested and Troubleshoot MODBUS and Serial Communication between controller, slave, and another controller using I2C and Modbus module.",
+    icon: "assets/companies/pharos.png",
   },
   {
-    date: "2016 - 2018",
-    title: "Student",
-    description: "Studying Computer Science and Engineering.",
-    icon: "assets/sie-logo-petrol-rgb.png",
+    date: "Jan 2023 - Mar 2024",
+    title: "Laboratory Assistant @ Control Laboratory Electrical Engineering Universitas Indonesia",
+    description: "Developing Unmanned Vehicle like drone (UAV), rover, and line follower for practicum. Facilitated 150+ students in understanding control engineering through practical laboratory sessions.",
+    icon: "assets/companies/ui.svg",
   },
 ];
 
 const Experiences = () => {
   return (
     <section id="experiences">
-      <div className="flex flex-col items-center py-10 bg-violet-600 text-white">
+      <div className="flex flex-col items-center py-16 bg-violet-600 text-white">
         <h2 className="text-xl md:text-4xl font-bold mb-8 bg-violet-400 p-4">
           My Working Experiences
         </h2>
@@ -50,7 +50,7 @@ const Experiences = () => {
                   <img
                     src={experience.icon}
                     alt={experience.title}
-                    className="w-6 h-6"
+                    className="w-15 h-7"
                   />
                 </div>
 
