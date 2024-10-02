@@ -1,5 +1,4 @@
 import LogoNavbar from "../../assets/Header.png";
-import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 const Header = () => {
@@ -13,19 +12,19 @@ const Header = () => {
   const Navbar = [
     {
       name: "Home",
-      link: "/",
+      link: "#home",
     },
     {
       name: "About",
-      link: "/",
+      link: "#about",
     },
     {
       name: "My Projects",
-      link: "/",
+      link: "#projects",
     },
     {
       name: "LogoNavbar",
-      link: "/",
+      link: "#home",
     },
     {
       name: "Resume",
@@ -33,11 +32,11 @@ const Header = () => {
     },
     {
       name: "Experience",
-      link: "/",
+      link: "#experiences",
     },
     {
       name: "Contact",
-      link: "/",
+      link: "#contact",
     },
   ];
 
@@ -76,62 +75,70 @@ const Header = () => {
 
   return (
     <>
-      <nav
-        className="active fixed w-full h-[auto] mt-5 z-50"
-      >
-        <div className="flex flex-col xl:flex-row justify-around mx-8 bg-zinc-800 text-zinc-200 rounded-full shadow-xl h-[55px] transition-all duration-500" style={{ opacity: opacity, scale: offset }}>
-          <div className="flex flex-row xl:block xl:hidden justify-between px-10 my-2">
-            <img
+      <section id="home">
+        <nav className="active fixed w-full h-[auto] mt-5 z-50">
+          <div
+            className="flex flex-col xl:flex-row justify-around mx-8 bg-zinc-800 text-violet-50 rounded-full shadow-xl h-[55px] transition-all duration-500"
+            style={{ opacity: opacity, scale: offset }}
+          >
+            <div className="flex flex-row xl:block xl:hidden justify-between px-10 my-2">
+              <img src={LogoNavbar} alt="Logo Navbar" className="h-[40px]" />
+              <button onClick={toggleMenu}>
+                <svg
+                  className="w-5 h-5"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 17 14"
+                >
+                  <path
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M1 1h15M1 7h15M1 13h15"
+                  />
+                </svg>
+              </button>
+            </div>
+            <ul
+              className={`mx-4 py-4 flex flex-col h-auto ${
+                menuOpen
+                  ? "scale-100 visible rounded-lg bg-zinc-800/30"
+                  : "scale-0 invisible"
+              } xl:scale-100 xl:bg-transparent xl:visible xl:flex-row gap-1 xl:h-[55px] justify-around xl:w-full`}
+            >
+              {Navbar.map((item, index) => (
+                <li
+                  key={index}
+                  className="flex flex-col justify-center font-semibold w-full items-center px-20 xl:px-0"
+                >
+                  {item.name != "LogoNavbar" && (
+                    <a
+                      href={item.link}
+                      className="h-[40px] place-content-center p-3 flex items-center transition ease-in-out delay-150 w-full rounded-full hover:scale-110 hover:bg-violet-600 duration-300"
+                    >
+                      {item.name}
+                    </a>
+                  )}
+                  {item.name == "LogoNavbar" && (
+                    <a
+                      href={item.link}
+                      className="flex hidden block xl:visible xl:inline w-[107px]"
+                    >
+                      <img
                         src={LogoNavbar}
                         alt="Logo Navbar"
                         className="h-[40px]"
                       />
-            <button onClick={toggleMenu}>
-              <svg
-                className="w-5 h-5"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 17 14"
-              >
-                <path
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M1 1h15M1 7h15M1 13h15"
-                />
-              </svg>
-            </button>
+                    </a>
+                  )}
+                </li>
+              ))}
+            </ul>
           </div>
-          <ul className={`mx-4 py-4 flex flex-col h-auto ${menuOpen ? 'scale-100 visible rounded-lg bg-zinc-800/30' : 'scale-0 invisible'} xl:scale-100 xl:bg-transparent xl:visible xl:flex-row gap-1 xl:h-[55px] justify-around xl:w-full`}>
-            {Navbar.map((item, index) => (
-              <li
-                key={index}
-                className="flex flex-col justify-center font-semibold w-full items-center px-20 xl:px-0"
-              >
-                {item.name != "LogoNavbar" && (
-                  <Link
-                    to={item.link}
-                    className="h-[40px] place-content-center p-3 flex items-center transition ease-in-out delay-150 w-full rounded-full hover:scale-110 hover:bg-violet-600 duration-300"
-                  >
-                    {item.name}
-                  </Link>
-                )}
-                {item.name == "LogoNavbar" && (
-                  <Link to={item.link} className="flex hidden block xl:visible xl:inline w-[107px]">
-                    <img
-                      src={LogoNavbar}
-                      alt="Logo Navbar"
-                      className="h-[40px]"
-                    />
-                  </Link>
-                )}
-              </li>
-            ))}
-          </ul>
-        </div>
-      </nav>
+        </nav>
+      </section>
     </>
   );
 };

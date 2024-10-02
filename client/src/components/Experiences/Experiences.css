@@ -1,0 +1,13 @@
+/* Optional: horizontal scroll using the mouse wheel */
+.overflow-x-auto {
+    scroll-snap-type: x mandatory;
+  }
+  
+  .overflow-x-auto::-webkit-scrollbar {
+    display: none; /* Hide scrollbar */
+  }
+  
+  .overflow-x-auto {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
