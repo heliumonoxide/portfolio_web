@@ -87,11 +87,15 @@ const Projects = () => {
   return (
     <>
       <section id="projects">
-        <div className="flex flex-col h-[100vh] justify-center">
-          <div className="flex flex-row w-full px-10 mt-10 inline-block justify-center text-xl md:text-4xl font-bold text-violet-600">
+        <div className="flex flex-col h-[100vh] justify-center relative w-[100vw] max-w-full">
+          <img src="assets/LineEllipse.png" className="absolute top-[10vh] -left-72 z-0" alt="" />
+          <img src="assets/LineEllipse.png" className="absolute top-[10vh] -left-72 scale-75 z-0" alt="" />
+          <img src="assets/star.png" className="absolute top-[15vh] md:top-[10vh] invisible md:visible right-[15vw] z-0" alt="" />
+          <img src="assets/star.png" className="absolute top-[15vh] md:top-[15vh] invisible md:visible right-[12vw] scale-75 z-0" alt="" />
+          <div className="flex flex-row w-full px-10 mt-10 inline-block justify-center text-xl md:text-4xl font-bold text-violet-600 z-30">
             <h1 className="bg-violet-100 p-5">My Projects (2020 - 2024)</h1>
           </div>
-          <div className="flex flex-row w-full px-10 mt-10 justify-center md:gap-10">
+          <div className="flex flex-row w-full px-10 mt-10 justify-center md:gap-10 z-30">
             <button onClick={() => setActiveIndex(0)}>
               <div
                 className={
@@ -126,7 +130,7 @@ const Projects = () => {
               </div>
             </button>
           </div>
-          <div className="flex flex-row w-full justify-between">
+          <div className="flex flex-row w-full justify-between z-30">
             <div className="flex flex-row w-[100vw] max-w-full overflow-hidden justify-center">
               <div
                 className="flex flex-row w-[100vw] max-w-full mt-2 transition-transform duration-700 ease-in-out"
