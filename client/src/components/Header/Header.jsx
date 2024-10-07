@@ -1,4 +1,3 @@
-import LogoNavbar from "../../assets/Header.png";
 import { useState, useEffect } from "react";
 
 const Header = () => {
@@ -81,8 +80,8 @@ const Header = () => {
             className="flex flex-col xl:flex-row justify-around mx-8 bg-zinc-800 text-violet-50 rounded-full shadow-xl h-[55px] transition-all duration-500"
             style={{ opacity: opacity, scale: offset }}
           >
-            <div className="flex flex-row xl:block xl:hidden justify-between px-10 my-2">
-              <a href="#home"><img height="40px" src={LogoNavbar} alt="Logo Navbar" className="h-[40px]" onError={() => console.log('Image failed to load')} /></a>
+            <div className="flex flex-row block xl:hidden justify-between px-10 my-2">
+              <a href="#home"><img height="40px" src="assets/Header.png" alt="Logo Navbar" className="h-[40px]" /></a>
               <button onClick={toggleMenu}>
                 <svg
                   className="w-5 h-5"
@@ -90,10 +89,10 @@ const Header = () => {
                   width="1.25rem"
                   height="1.25rem"
                   fill="none"
-                  viewBox="0 0 17 14"
+                  viewBox="0 -4 24 24"
                 >
                   <path
-                    stroke="currentColor"
+                    stroke="#ffffff"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth="2"
@@ -128,7 +127,7 @@ const Header = () => {
                       className="flex hidden block xl:visible xl:inline w-[107px]"
                     >
                       <img
-                        src={LogoNavbar}
+                        src="assets/Header.png"
                         alt="Logo Navbar"
                         className="h-[40px]"
                       />
