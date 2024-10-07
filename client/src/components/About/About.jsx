@@ -29,7 +29,12 @@ const About = () => {
   return (
     <>
       <section id="about">
-        <div className="flex flex-col">
+        <div className="flex flex-col relative w-[100vw] max-w-full">
+          <img src="assets/star.png" className="absolute top-[34px] left-10 w-10 md:w-20 md:left-20" alt="" />
+          <img src="assets/star.png" className="absolute top-[49px] scale-75 md:invisible left-16 w-10 md:w-20 md:left-20" alt="" />
+          <img src="assets/LineEllipse.png" className="absolute top-[10vh] -right-52 z-0" alt="" />
+          <img src="assets/LineEllipse.png" className="absolute top-[10vh] -right-52 scale-75 z-0" alt="" />
+          <img src="assets/PinkEllipse.png" className="absolute top-[65vh] md:top-[10vh] -left-32 z-0" alt="" />
           <div className="flex flex-row mx-10 sm:mx-[50px] md:mx-[200px] pt-10 md:pt-20 pb-10 place-content-center gap-10 flex-wrap">
             <div className="flex w-[225px] justify-center">
               <img
@@ -38,7 +43,7 @@ const About = () => {
                 className="h-[200px] md:h-[300px] z-10 rounded-full"
               />
             </div>
-            <div className="flex flex-col px-5 md:px-1 text-violet-50 w-[800px] gap-5">
+            <div className="flex flex-col px-5 md:px-1 text-violet-50 w-[800px] gap-5 z-40">
               <h1 className="text-2xl md:text-5xl px-1 md:px-10 font-bold">About Me</h1>
               <p className="text-md md:text-xl px-1 md:px-10 font-thin text-justify">
                 I am a Fresh Graduate from Universitas Indonesia, majoring in
@@ -53,7 +58,7 @@ const About = () => {
               </p>
             </div>
           </div>
-          <div className="bg-white mx-5 md:mx-60 rounded-[40px] h-[100px] md:h-[210px] md:rounded-[70px] mt-5 mb-10">
+          <div className="bg-white mx-5 md:mx-60 rounded-[40px] h-[100px] md:h-[210px] md:rounded-[70px] mt-5 mb-10 z-40">
             {/* <div className="flex">
                 <div className="w-full h-[1px] bg-white mx-40 mb-5"></div>
             </div> */}
