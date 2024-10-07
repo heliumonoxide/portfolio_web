@@ -32,9 +32,9 @@ const About = () => {
         <div className="flex flex-col relative w-[100vw] max-w-full">
           <img src="assets/star.png" className="absolute top-[34px] left-10 w-10 md:w-20 md:left-20" alt="" />
           <img src="assets/star.png" className="absolute top-[49px] scale-75 md:invisible left-16 w-10 md:w-20 md:left-20" alt="" />
-          <img src="assets/LineEllipse.png" className="absolute top-[10vh] -right-52 z-0" alt="" />
-          <img src="assets/LineEllipse.png" className="absolute top-[10vh] -right-52 scale-75 z-0" alt="" />
-          <img src="assets/PinkEllipse.png" className="absolute top-[65vh] md:top-[10vh] -left-32 z-0" alt="" />
+          <img src="assets/LineEllipse.png" className="absolute top-[6vh] -right-[300px] md:-right-[500px] z-0" alt="" />
+          <img src="assets/LineEllipse.png" className="absolute top-[6vh] -right-[300px] md:-right-[500px] scale-75 z-0" alt="" />
+          <img src="assets/PinkEllipse.png" className="absolute top-[65vh] md:top-[10vh] -left-64 z-0" alt="" />
           <div className="flex flex-row mx-10 sm:mx-[50px] md:mx-[200px] pt-10 md:pt-20 pb-10 place-content-center gap-10 flex-wrap">
             <div className="flex w-[225px] justify-center">
               <img
