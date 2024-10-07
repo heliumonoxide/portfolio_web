@@ -60,11 +60,11 @@ const VerticalCarousel = ({ cards }) => {
             {cards.map((card, index) => (
               <div
                 key={index}
-                className="w-full h-[400px] py-5 flex md:flex-row flex-col items-center justify-center rounded-lg"
+                className="w-full h-[400px] pt-5 pb-10 flex md:flex-row flex-col items-center justify-center rounded-lg"
               >
-                <div className="md:w-[800px] h-[100px] overflow-hidden md:h-full justify-center content-center md:pr-10">
+                <div className="flex md:w-[800px] h-[100px] overflow-hidden md:h-full justify-center content-center md:pr-10">
                   <img
-                    className="object-cover object-left rounded-lg md:h-[320px]"
+                    className="object-contain object-left rounded-lg md:h-[320px]"
                     src={card.picture}
                     alt=""
                   />
@@ -76,7 +76,7 @@ const VerticalCarousel = ({ cards }) => {
                   <p className="text-sm md:text-base line-clamp-3 md:line-clamp-6">
                     {card.content}
                   </p>
-                  <div className="flex flex-col md:flex-row justify-between w-full">
+                  <div className="flex flex-col gap-3 mt-2 md:mt-0 md:gap-0 md:flex-row md:justify-between w-full">
                     <div className="flex flex-row justify-center md:justify-start gap-1 md:gap-5">
                       {card.logos.map((logo, logoIndex) => (
                         <img
@@ -87,11 +87,11 @@ const VerticalCarousel = ({ cards }) => {
                         />
                       ))}
                     </div>
-                    <div className="bg-gradient-to-r from-[#FF63EA] to-[#0029CF] text-sm md:text-lg inline-block px-4 py-2 text-transparent bg-clip-text">
                       {card.link != "" && (
-                        <a href={card.link}>Go to project {">"}</a>
+                        <div className="bg-gradient-to-r from-[#FF63EA] to-[#0029CF] text-sm md:text-lg inline-block px-4 py-2 text-transparent bg-clip-text">
+                            <a href={card.link}>Go to project {">"}</a>
+                        </div>
                       )}
-                    </div>
                   </div>
                 </div>
               </div>

@@ -82,7 +82,7 @@ const Header = () => {
             style={{ opacity: opacity, scale: offset }}
           >
             <div className="flex flex-row xl:block xl:hidden justify-between px-10 my-2">
-              <a href="#home"><img height="40px" src={LogoNavbar} alt="Logo Navbar" className="h-[40px]" /></a>
+              <a href="#home"><img height="40px" src={LogoNavbar} alt="Logo Navbar" className="h-[40px]" onError={() => console.log('Image failed to load')} /></a>
               <button onClick={toggleMenu}>
                 <svg
                   className="w-5 h-5"

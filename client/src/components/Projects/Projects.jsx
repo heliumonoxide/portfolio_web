@@ -2,7 +2,7 @@ import VerticalCarousel from "../VerticalCarousel/VerticalCarousel";
 import { useState, useEffect } from "react";
 
 const Projects = () => {
-  const cards = [
+  const hardwares = [
     {
       title: "Water Quality Monitoring Device",
       content: "A mechanical machine with ESP32 as microcontroller base. Utilizing all the ESP32 features, Deep Sleep, SPIFFS, and Wi-Fi module of ESP32 is used. SPIFFS is used for webpage file and data partitioning for optimizing each process. Wi-Fi module is used for connecting the ESP32 into local Wi-Fi and assigning IP Address into ESP32 in the network. Because of the large network in Wi-Fi Universitas Indonesia, direct cloud server for the database is no longer needed. Data (JSON) in the ESP32 then can be accessed for showing the webpage and process pooled data into a conclusion. Each of the mechanical parts is already up to food standard.",
@@ -14,7 +14,7 @@ const Projects = () => {
       title: "Pure Water Generator",
       content:
         "A machine that befits its name, generating pure water without any ions or particle within. This machine is strictly designed machine that needed to precise in its each water channel. This machine comprises of transmitters and actuators. The transmitter transmits value data to the controller to be processed within and actuator make controller calculation to idealize the water into pure water. Water is processed with pH dosing and filters.",
-      logos: ["assets/python.svg", "assets/arduino.svg"],
+      logos: ["assets/python.svg", "assets/arduino.svg", "assets/django.svg"],
       picture: "assets/projects/pharos.png",
       link: "",
     },
@@ -42,7 +42,7 @@ const Projects = () => {
     {
       title: "Automated Storage Retrieval System (ASRS)",
       content: "An Automated Storage and Retrieval System (ASRS) using Arduino Mega is designed to automate the process of storing and retrieving items from designated storage locations. The system utilizes the Arduino Mega microcontroller to control motors, sensors, and actuators, enabling precise movement of a retrieval mechanism along multiple axes. The system identifies and retrieves items based on user input or programmed instructions, improving efficiency in warehouses by reducing manual labor and minimizing retrieval time. This solution provides a reliable and scalable method for inventory management and warehouse automation.",
-      logos: ["assets/python.svg", "assets/arduino.svg"],
+      logos: ["assets/python.svg", "assets/arduino.svg", "assets/django.svg"],
       picture: "assets/projects/pharos.png",
       link: "",
     },
@@ -76,13 +76,117 @@ const Projects = () => {
     },
   ];
 
+  const softwares = [
+    {
+      title: "Order Aging Website",
+      content: "A sophisticated data visualization website employing Angular as the front-end framework and .NET Core 8.0 as the backend infrastructure. The project leverages Microsoft SQL Server and SAP for database management and incorporates advanced functionalities such as dynamic remarks, data filtering, and data export features. This website is utilized across the Southeast Asia region, serving a diverse user base with varying data visualization needs.",
+      logos: ["assets/dotnet.svg", "assets/cs.svg", "assets/microsoftsql.svg", "assets/angular.svg"],
+      picture: "assets/companies/siemens.svg",
+      link: "",
+    },
+    {
+      title: "VidCompH26X Application",
+      content: "A sophisticated video compression application utilizing Python and Tkinter, designed to provide an efficient user experience through a modern and intuitive interface. The application implements H.261 and H.263 codec algorithms for effective video compression with more features of configuration of output. The user interface was meticulously designed using Tkinter Designer and Figma, ensuring both functionality and aesthetic appeal.",
+      logos: ["assets/python.svg", "assets/tkinter.png", "assets/ffmpeg.svg"],
+      picture: "assets/projects/vidcomp.png",
+      link: "https://github.com/vincadrn/signal-processing-final",
+    },
+    {
+      title: "Excel bot automation application",
+      content: "This Python script automates the process of inserting rows of data from order aging Excel files into a Microsoft SQL Server database. By utilizing powerful libraries like pymssql, pandas, and numpy, it handles data extraction, transformation, and loading (ETL) efficiently. The script is packaged into an executable file using PyInstaller for ease of use.",
+      logos: ["assets/python.svg", "assets/pandas.svg"],
+      picture: "assets/companies/siemens.svg",
+      link: "",
+    },
+    {
+      title: "E-commerce Catalogue Automator",
+      content: "E-Commerce Catalogue Automator is a user-friendly, free bot designed to help users dominate time-based deals on Shopee, addressing the difficulty and inaccessibility of existing bots. Built with libraries like Selenium, PyQT5, and Numpy, the project features a custom UI designed using PYQT5 designer tools, with images handled through converted QRC files. The front-end is generated and modified to handle inputs like email, password, product specs, payment methods, time, and product links, while `main.py` coordinates front-end and back-end processes for smooth automation. The bot is accessible via GitHub.",
+      logos: ["assets/python.svg", "assets/pyqt.svg", "assets/selenium.svg"],
+      picture: "assets/projects/ecommerce.png",
+      link: "https://docs.google.com/presentation/d/1XMmV9S4zFherrvBvy115Ia3s96Pp-kDWX5xlnsAxmw0/edit?usp=sharing",
+    },
+    {
+      title: "Application Link Portal Website",
+      content: "The Application Link Portal Website is a user-friendly web platform developed using Angular for the front end and .NET 8 Core for the back end. This portal centralizes access to various applications and services within an organization, providing users with a single, secure point of entry. With its intuitive navigation and responsive design, the portal ensures optimal user experience across different devices.",
+      logos: ["assets/dotnet.svg", "assets/cs.svg", "assets/microsoftsql.svg", "assets/angular.svg"],
+      picture: "assets/companies/siemens.svg",
+      link: "",
+    },
+    {
+      title: "Training Request Bot",
+      content: "Fully automated bot that triggered when new request is made within SharePoint platform. Databases reside within SharePoint where the  data then processed with Power Automate using API. Request comes from user interface that's designed and built by PowerApps. This Bot automates the process from employee to request incidental training, process, and log all the information based on the flow.",
+      logos: ["assets/powerapps.svg", "assets/powerautomate.svg", "assets/sharepoint.svg"],
+      picture: "assets/companies/telkomsel.svg",
+      link: "",
+    },
+    {
+      title: "Working Permit ID by EHS",
+      content: "A form-based application designed for managing the approval process of working permits within an organization. The application is developed using PowerApps, SharePoint, and Power Automate. It is tailored to handle multiple levels of approval, including adding precaution measure from contractor engagement manager, review by the PIC Area, and final approval by the Environmental Health and Safety (EHS) team and generating final report file.",
+      logos: ["assets/powerapps.svg", "assets/powerautomate.svg", "assets/sharepoint.svg"],
+      picture: "assets/companies/siemens.svg",
+      link: "",
+    },
+    {
+      title: "Event Protection Checklist",
+      content: "A form-based application designed for managing the protection check for an event within an organization. The application is developed using PowerApps, SharePoint, and Power Automate. It is tailored to handle multiple levels of approval, multiple level case forms, including simple one-step approval to every side, and generating final report file.",
+      logos: ["assets/powerapps.svg", "assets/powerautomate.svg", "assets/sharepoint.svg"],
+      picture: "assets/companies/siemens.svg",
+      link: "",
+    },
+    {
+      title: "Fast Processing Local Inventory",
+      content: "This project aims to simplify the process of inventory management for users by digitizing asset or item tracking. Generally, the program includes features to add items, modify the quantity of stored items, display all items successfully added to the inventory, delete items from the inventory, and search for items within the inventory. Since the Final Project requires the implementation of Linked List and Binary Tree data structures, these structures will be utilized and displayed within relevant features of the program.",
+      logos: ["assets/c.svg"],
+      picture: "assets/projects/inventory.png",
+      link: "https://github.com/vincadrn/program-inventarisasi",
+    },
+    {
+      title: "Primezone Play Zone (C games playground)",
+      content: "This project uses the C language as a programming base. The name primezone comes from timezone, a place to play games. Same as timezone, primezone also provides several games including Pokemon, Dino Duel, etc. As the player, you must top up first. Then you can play as you like. Each game will provide guidance to play the game. So have fun!",
+      logos: ["assets/c.svg"],
+      picture: "assets/projects/primezone.png",
+      link: "",
+    },
+  ]
+
+  const ais = [
+    {
+      title: "Human Animal Classification System with Millimeter Wave (3D-CNN VGG16 based)",
+      content: "The post-disaster condition is an emergency that requires immediate first aid from rescue teams. Therefore, the use of radar has been developed to detect humans in post-disaster conditions. Unfortunately, the numerous parameters affecting classification, such as rubble covering humans, limit the use of 24 GHz radar. Therefore, the method was further developed using Convolutional Neural Networks (CNN). The accuracy achieved improved to 99% for both two-class and three-class classifications, but it decreased to 68% for classifications with more classes. This project proposes the use of a 3D-Convolutional Neural Network method to enhance the resolution of the data used in model training, aiming to improve the accuracy of class classification with the proposed model.",
+      logos: ["assets/python.svg", "assets/matlab.svg", "assets/uipath.svg", "assets/cuda.svg", "assets/keras.svg"],
+      picture: "assets/companies/ui.svg",
+      link: "https://github.com/heliumonoxide/konservasi_air",
+    },
+    {
+      title: "LSTM Predictive Maintenance for Pressing Machine",
+      content: "This project is used as a system to predict whether the machine need a maintenance or not before it actually happen using 4 indicator as fields label. Data taken as a sequence to train using LSTM and Classification using simple neural network.",
+      logos: ["assets/python.svg", "assets/cuda.svg", "assets/keras.svg"],
+      picture: "assets/projects/predictive.png",
+      link: "https://colab.research.google.com/drive/1SFAfNoVT9vMATdCAYxFNKm2T-PHHxHtX?usp=sharing",
+    },
+    {
+      title: "Fine-Tuned Backpropagation Neural Network with Direct Inverse Control (DIC)",
+      content: "This project implements Direct Inverse Control (DIC) using Backpropagation Neural Networks (BPNN) to manage complex dynamic systems. As problems grow in complexity with many interacting variables, BPNN helps model and adapt these systems through continuous fine-tuning of parameters. The DIC method, shown in the block diagram, uses the plant's inverse to predict system inputs from past outputs, ensuring precise control by minimizing error in a closed-loop system. This approach enhances the accuracy of the model, particularly when handling random data, making it effective for training and testing phases.",
+      logos: ["assets/matlab.svg"],
+      picture: "assets/projects/DIC.png",
+      link: "https://github.com/heliumonoxide/BPNN_FineTuned_DIC",
+    },
+    {
+      title: "Enhanced Linear Active Disturbance Rejection Control Algorithm for PMSM",
+      content: "This project is used for research purposes where ELADRC is a controller in system that uses 2 linear extended state observers as feedback for dynamic system. In this case, this controller algorithm is used on Permanent Magnet Synchronous Motor as stabilized/robust motor control from any disturbances. This algorithm is compiled using CMEX to encapsulate the controller model into useable S-Function block in Simulink.",
+      logos: ["assets/matlab.svg", "assets/cmex.png"],
+      picture: "assets/projects/DIC.png",
+      link: "https://github.com/heliumonoxide/BPNN_FineTuned_DIC",
+    },
+  ]
+
   const [activeIndex, setActiveIndex] = useState(0);
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((prevIndex) => (prevIndex === 3 ? 0 : prevIndex));
     }); // Change slide every 3 seconds
     return () => clearInterval(interval);
-  }, [cards.length]);
+  }, [hardwares.length]);
 
   return (
     <>
@@ -139,13 +243,13 @@ const Projects = () => {
                 }}
               >
                 <div className="flex flex-col gap-5 w-[100vw] max-w-full py-10 px-10 items-center justify-center">
-                  <VerticalCarousel cards={cards} />
+                  <VerticalCarousel cards={hardwares} />
                 </div>
                 <div className="flex flex-col gap-5 w-[100vw] max-w-full py-10 px-10 items-center justify-center">
-                  <VerticalCarousel cards={cards} />
+                  <VerticalCarousel cards={softwares} />
                 </div>
                 <div className="flex flex-col gap-5 w-[100vw] max-w-full py-10 px-10 items-center justify-center">
-                  <VerticalCarousel cards={cards} />
+                  <VerticalCarousel cards={ais} />
                 </div>
               </div>
             </div>
