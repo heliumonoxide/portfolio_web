@@ -63,15 +63,22 @@ const Projects = () => {
     {
       title: "Box Sorter FactoryIO",
       content: "PLC based program that serves as logic flow for sorting a box based on its dimension and counting how many boxes have been sorted. Each component will take on register memory that will be used on FactoryIO to simulate its function using Modbus TCP/IP communication between Ecostruxure Schneider Machine Expert and FactoryIO.",
-      logos: ["assets/factoryio.png", "assets/nodered.svg"],
-      picture: "",
+      logos: ["assets/factoryio.png", "assets/nodered.svg", "assets/ecostruxure.png"],
+      picture: "assets/projects/factoryio_boxsorter.jpeg",
+      link: "",
+    },
+    {
+      title: "Material Sorter FactoryIO",
+      content: "PLC based program that serves as logic flow for sorting material based on its material and counting how many boxes have been sorted. Each component will take on register memory that will be used on FactoryIO to simulate its function using Modbus TCP/IP communication between Ecostruxure Schneider Machine Expert and FactoryIO.",
+      logos: ["assets/factoryio.png", "assets/nodered.svg", "assets/ecostruxure.png"],
+      picture: "assets/projects/materialsorter.jpeg",
       link: "",
     },
     {
       title: "Line Follower OpenGL Robot",
       content: "Robust tuned Line Follower Virtual Robot that’s animated with OpenGL platform. Refined with Jacobian matrix to control, the robot is able to read black line be it thin or sharp turn supported by PID Controller algorithm within.",
-      logos: ["assets/esp.svg", "assets/opengl.svg", "assets/matlab.svg"],
-      picture: "",
+      logos: ["assets/esp.svg", "assets/opengl.svg", "assets/matlab.svg", "assets/cygwin.svg"],
+      picture: "assets/projects/lf.jpeg",
       link: "https://github.com/heliumonoxide/LF_OPENGL",
     },
   ];
@@ -175,8 +182,8 @@ const Projects = () => {
       title: "Enhanced Linear Active Disturbance Rejection Control Algorithm for PMSM",
       content: "This project is used for research purposes where ELADRC is a controller in system that uses 2 linear extended state observers as feedback for dynamic system. In this case, this controller algorithm is used on Permanent Magnet Synchronous Motor as stabilized/robust motor control from any disturbances. This algorithm is compiled using CMEX to encapsulate the controller model into useable S-Function block in Simulink.",
       logos: ["assets/matlab.svg", "assets/cmex.png"],
-      picture: "assets/projects/DIC.png",
-      link: "https://github.com/heliumonoxide/BPNN_FineTuned_DIC",
+      picture: "assets/projects/eladrc.jpeg",
+      link: "https://github.com/heliumonoxide/CMEX_ELADRC",
     },
   ]
 

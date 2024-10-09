@@ -14,7 +14,9 @@ function App() {
     <>
       <Router>
         <div className="flex-col w-[100vw] max-w-full overflow-hidden scroll-smooth">
-          <Header />
+          <div className="z-[50]">
+            <Header />
+          </div>
           <a href="#home">
             <div className="bg-violet-600 fixed inline-block rounded-full p-3 shadow-xl z-50 bottom-10 right-5 md:bottom-10 md:right-20">
               <img src="assets/up.svg" alt="up-arrow" className="w-6 h-6" />

@@ -77,10 +77,10 @@ const Header = () => {
       <section id="home">
         <nav className="active fixed w-full h-[auto] mt-5 z-50">
           <div
-            className="flex flex-col xl:flex-row justify-around mx-8 bg-zinc-800 text-violet-50 rounded-full shadow-xl h-[55px] transition-all duration-500"
+            className="flex flex-col xl:flex-row justify-around mx-8 bg-zinc-800 text-violet-50 rounded-full shadow-xl h-[55px] transition-all duration-500 z-[60]"
             style={{ opacity: opacity, scale: offset }}
           >
-            <div className="flex flex-row block xl:hidden justify-between px-10 my-2">
+            <div className="flex flex-row block xl:hidden justify-between px-10 my-2 z-[70]">
               <a href="#home"><img height="40px" src="assets/Header.png" alt="Logo Navbar" className="h-[40px]" /></a>
               <button onClick={toggleMenu}>
                 <svg
@@ -102,7 +102,7 @@ const Header = () => {
               </button>
             </div>
             <ul
-              className={`mx-4 py-4 flex flex-col h-auto ${
+              className={`mx-4 py-4 flex flex-col h-auto z-[90] ${
                 menuOpen
                   ? "scale-100 visible rounded-lg bg-zinc-800/30"
                   : "scale-0 invisible"
