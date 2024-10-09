@@ -8,12 +8,9 @@ const VerticalCarousel = ({ cards }) => {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((prevIndex) =>
-        prevIndex === cards.length - 1 ? 0 : prevIndex 
-      + 1
+        prevIndex === cards.length - 1 ? 0 : prevIndex + 1
       );
-    }
-    , 9000
-  ); // Change slide every 3 seconds
+    }, 9000); // Change slide every 3 seconds
     return () => clearInterval(interval);
   }, [cards.length]);
 
@@ -60,8 +57,11 @@ const VerticalCarousel = ({ cards }) => {
             {cards.map((card, index) => (
               <div
                 key={index}
-                className="w-full h-[400px] pt-5 pb-10 flex md:flex-row flex-col items-center justify-center rounded-lg"
+                className="group w-full h-[400px] pt-5 pb-10 flex md:flex-row flex-col items-center justify-center rounded-lg"
               >
+                <span className="absolute scale-0 transition-all rounded bg-gray-800 z- p-2 text-xs text-white group-hover:scale-100">
+                      {card.content}
+                    </span>
                 <div className="flex md:w-[800px] h-[100px] overflow-hidden md:h-full justify-center content-center md:pr-10">
                   <img
                     className="object-contain object-left rounded-lg md:h-[320px]"
@@ -87,11 +87,11 @@ const VerticalCarousel = ({ cards }) => {
                         />
                       ))}
                     </div>
-                      {card.link != "" && (
-                        <div className="bg-gradient-to-r from-[#FF63EA] to-[#0029CF] text-sm md:text-lg inline-block px-4 py-2 text-transparent bg-clip-text">
-                            <a href={card.link}>Go to project {">"}</a>
-                        </div>
-                      )}
+                    {card.link != "" && (
+                      <div className="bg-gradient-to-r from-[#FF63EA] to-[#0029CF] text-sm md:text-lg inline-block px-4 py-2 text-transparent bg-clip-text">
+                        <a href={card.link}>Go to project {">"}</a>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
