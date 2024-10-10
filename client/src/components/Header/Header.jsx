@@ -81,10 +81,10 @@ const Header = () => {
             style={{ opacity: opacity, scale: offset }}
           >
             <div className="flex flex-row block xl:hidden justify-between px-10 my-2 z-[70]">
-              <a href="#home"><img height="40px" src="assets/Header.png" alt="Logo Navbar" className="h-[40px]" /></a>
+              <a href="#home"><img height="40px" src="assets/Header.png" alt="Logo Navbar" className="h-[40px] z-[80]" /></a>
               <button onClick={toggleMenu}>
                 <svg
-                  className="w-5 h-5"
+                  className="w-5 h-5 z-[80]"
                   aria-hidden="true"
                   width="1.25rem"
                   height="1.25rem"
